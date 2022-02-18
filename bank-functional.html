@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transaction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="container ">
+        <h1 class="text-center py-5">Hello Client!!!</h1>
+    </header>
+    <main>
+        <section class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow p-3 mb-5 bg-body rounded">
+                        <div class="card-body text-white bg-primary">
+                            <h5 class="card-title">Deposit</h5>
+                            <h3 class="h3">$<span id="deposit-total">00</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow p-3 mb-5 bg-body rounded">
+                        <div class="card-body text-white bg-danger">
+                            <h5 class="card-title">Withdraw</h5>
+                            <h3 class="h3">$<span id="withdraw-total">00</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow p-3 mb-5 bg-body rounded">
+                        <div class="card-body text-white bg-success">
+                            <h5 class="card-title">Balance</h5>
+                            <h3 class="h3">$<span id="balance-total">1200</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container py-5">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow p-3 mb-5 bg-body rounded">
+                        <div class="card-body text-dark bg-info">
+                            <h5 class="card-title">Deposit</h5>
+                            <input id="deposit-input" type="text" class="mb-3" placeholder="$Deposit Amount">
+                            <br>
+                            <button id="deposit-button" class="btn bg-primary text-white btn-outline-secondary"
+                                type="button">Deposit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow p-3 mb-5 bg-body rounded">
+                        <div class="card-body text-dark bg-warning">
+                            <h5 class="card-title">Withdraw</h5>
+                            <input id="withdraw-input" type="text" class="mb-3" placeholder="$Withdraw Amount">
+                            <br>
+                            <button id="withdraw-button" class="btn bg-primary text-white btn-outline-secondary"
+                                type="button">Withdraw</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/functional.js"></script>
+</body>
+
+</html>
