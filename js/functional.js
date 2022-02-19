@@ -14,24 +14,25 @@ function totalValueUpdate(fieldId, amount) {
     totalField.innerText = newTotalValue; // totalfield er man ke newly define kora holo
 }
 
-function balanceUpdate() {
-    const balanceTotal = document.getElementById('balance-total');
-    const balanceTotalText = balanceTotal.innerText;
-    const previousBalanceValue = parseFloat(balanceTotalText)
+function balanceUpdate(amount) {
+    const balanceTag = document.getElementById('balance-total');
+    const balanceInText = balanceTag.innerText;
+    const previousBalanceValue = parseFloat(balanceInText);
+    const newBalance = previousBalanceValue + amount;
+    balanceTag.innerText = newBalance;
 
 }
 // deposit 
 document.getElementById('deposit-button').addEventListener('click', function () {
     const amount = getInputValue('deposit-input'); // amount variable er maddhome totalValueUpdate function er parameter er man set kora hoyechey 
     totalValueUpdate('deposit-total', amount); // upor thake amount variable ke paremeter hishabe pathano hoyechey
-
-    balanceUpdate();
+    balanceUpdate(amount);
 })
 // withdraw
 document.getElementById('withdraw-button').addEventListener
     ('click', function () {
         const amount = getInputValue('withdraw-input');
-
+        totalValueUpdate('withdraw-total', amount)
     })
 
 
