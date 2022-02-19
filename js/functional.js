@@ -13,11 +13,19 @@ function totalValueUpdate(fieldId, amount) {
     const newTotalValue = previousTotalValue + amount; // old value er shathe new input field thake pawa amount addition kora holo
     totalField.innerText = newTotalValue; // totalfield er man ke newly define kora holo
 }
-function balanceUpdate()
+
+function balanceUpdate() {
+    const balanceTotal = document.getElementById('balance-total');
+    const balanceTotalText = balanceTotal.innerText;
+    const previousBalanceValue = parseFloat(balanceTotalText)
+
+}
 // deposit 
 document.getElementById('deposit-button').addEventListener('click', function () {
     const amount = getInputValue('deposit-input'); // amount variable er maddhome totalValueUpdate function er parameter er man set kora hoyechey 
     totalValueUpdate('deposit-total', amount); // upor thake amount variable ke paremeter hishabe pathano hoyechey
+
+    balanceUpdate();
 })
 // withdraw
 document.getElementById('withdraw-button').addEventListener
